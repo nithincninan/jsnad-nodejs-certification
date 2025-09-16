@@ -1,4 +1,5 @@
-//Proto
+//Prototype | Functional approach | Constructor function | Node approach | Object.assign | Object.hasOwn | Object.hasOwnProperty
+
 //Create a JavaScript object that models a Wolf and a Dog, where the Dog extends the Wolf object. 
 //The Dog object should have a woof method that logs the name and "woof" to the console. 
 //The Wolf object should have a howl method that logs the name and "awoooooooo" to the console. 
