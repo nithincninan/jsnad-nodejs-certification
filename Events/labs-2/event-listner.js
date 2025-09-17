@@ -11,7 +11,11 @@ const ee = new EventEmitter()
 
 //Answer
 //--------------------------------
+
 ee.on('error', (err) => {})
+//or
+//ee.addListener('error', (err) => {})
+
 //--------------------------------
 
 ee.emit('error', Error('timeout'))
@@ -20,6 +24,9 @@ ee.emit('error', Error('timeout'))
 //--------------------------------
 //passed!
 //--------------------------------
+
+//IMP:
+//ee.addListener('error', (err) => {}) : It is a method of the EventEmitter class. Adds a listener for a given event.
 
 
 
