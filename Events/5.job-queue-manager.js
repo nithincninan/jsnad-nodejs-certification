@@ -1,3 +1,9 @@
+//5. Job queue manager
+
+//Create a Node.js script with an `EventEmitter` that manages a job queue, 
+//emitting `jobAdded` and `jobCompleted` events and using `removeAllListeners` to stop processing jobs after a specified number of completions.
+
+'use strict'
 const { EventEmitter } = require('events');
 
 class MyEmitter extends EventEmitter {

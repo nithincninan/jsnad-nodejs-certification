@@ -53,5 +53,5 @@ setTimeout(() => {
 // .on() : Registers a listener function for the event. The listener can be called multiple times.
 // .clearInterval() : Stops the repeated execution of the code.
 // .setInterval() : Runs a piece of code repeatedly at fixed time intervals.
-// .Date.now() : Returns the current timestamp in milliseconds.
+// Date.now() : Returns the current timestamp in milliseconds.
 // .setTimeout() : Runs a piece of code after a specified time interval.
