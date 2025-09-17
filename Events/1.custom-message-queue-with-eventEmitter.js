@@ -51,9 +51,19 @@ processMessage();
 // All messages processed
 
 //IMP :
-//setInterval() is a built-in function used to run a piece of code repeatedly at fixed time intervals. With clearInterval() to stop it.
+// .on() : Registers a listener function for the event. The listener can be called multiple times.
+// .emit() : Emits a custom event.
+// .clearInterval() : Stops the repeated execution of the code.
+// .setInterval() : Runs a piece of code repeatedly at fixed time intervals.
+// .setTimeout() : Runs a piece of code after a specified time interval.
+
 //queue.shift() : Removes the first element from the array. Returns the removed element.
 //let queue = [1, 2, 3, 4];
 //let removed = queue.shift(); 
 //console.log(removed); // 1
 //console.log(queue);   // [2, 3, 4]
+
+//queue.push(msg) : Adds a new element to the end of the array.
+//let queue = [1, 2, 3, 4];
+//queue.push(5);
+//console.log(queue);   // [1, 2, 3, 4, 5]

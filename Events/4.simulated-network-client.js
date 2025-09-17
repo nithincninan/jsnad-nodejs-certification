@@ -1,3 +1,8 @@
+//4. Simulated network client
+//Write a Node.js script that simulates a network client using an `EventEmitter`, emitting `connect`, `data`, 
+//and `error` events and handling `error` to log issues without crashing the process.
+
+'use strict'
 const { EventEmitter } = require('events');
 
 class MyNetworkConnection extends EventEmitter {

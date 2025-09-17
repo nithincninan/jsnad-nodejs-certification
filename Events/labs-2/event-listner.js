@@ -10,10 +10,16 @@ process.nextTick(console.log, 'passed!')
 const ee = new EventEmitter()
 
 //Answer
+//--------------------------------
 ee.on('error', (err) => {})
+//--------------------------------
 
 ee.emit('error', Error('timeout'))
 
+//Output:
+//--------------------------------
+//passed!
+//--------------------------------
 
 
 
