@@ -11,12 +11,30 @@
 'use strict'
 const { EventEmitter } = require('events')
 
-process.nextTick(console.log, 'passed!')
-
 const ee = new EventEmitter()
 
-ee.on('test', () => { console.log('on-error') })
+const listener1 = (a,b) => {
+    console.log('---- listener1 ----'+a+b);
+};
 
-ee.prependListener('test', () => { console.log('prepend-listerer-error') })
+const listener2 = (a,b) => {
+    console.log('---- listener2 ----'+a+b);
+};
 
-ee.emit('test', Error('timeout'))
+ee.on('my-event', listener1);
+ee.on('my-event', listener2);
+
+setInterval(() => {
+    ee.emit('my-event', 10, 20);
+}, 200);
+
+setTimeout(() =>{
+    ee.removeListener('my-event', listener1)
+}, 500);
+
+setTimeout(() => {
+    ee.removeListener('my-event', listener2)
+}, 1100);
+
+
+

@@ -13,7 +13,7 @@ ee.on('my-event', listener1)
 ee.on('my-event', listener2)
 ee.on('another-event', () => { console.log('another event') })
 
-const intervalId = setInterval(() => {
+setInterval(() => {
   ee.emit('my-event')
   ee.emit('another-event')
 }, 200)

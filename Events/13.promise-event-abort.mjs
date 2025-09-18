@@ -3,6 +3,7 @@
 //Write a Node.js script that uses an `EventEmitter` to emit a `data` event with a promise,
 //and uses `AbortSignal` to abort the promise after a specified time.
 
+'use strict'
 import events from "events";
 //import { once, EventEmitter } from 'events'
 
@@ -10,12 +11,10 @@ const abort = new AbortController();
 const eventEmitter = new events.EventEmitter();
 
 setTimeout(() => eventEmitter.emit("data", { ok: "ok" }), 5000);
-setTimeout(() => abort.abort("Timeout"), 8000);
+setTimeout(() => abort.abort("Timeout"), 2000);
 
 try {
-  const data = await events.once(eventEmitter, "data", {
-    signal: abort.signal,
-  });
+  const data = await events.once(eventEmitter, "data", { signal: abort.signal });
 
   console.log(data);
 } catch (err) {
