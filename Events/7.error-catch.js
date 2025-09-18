@@ -10,7 +10,7 @@ const ee = new EventEmitter();
 process.stdin.resume(); // keep process alive
 
 ee.on('error', (err) => {
-  console.log('Error message:', err.message);
+  console.error('Error message:', err.message);
 });
 
 ee.on('data', (data) => {
@@ -19,6 +19,8 @@ ee.on('data', (data) => {
 
 ee.emit('error', new Error('Error Occurred'));
 ee.emit('data', 'Data Received');
+
+process.stdin.pause(); 
 
 //Output:
 //--------------------------------

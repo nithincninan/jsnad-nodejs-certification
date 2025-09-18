@@ -1,4 +1,5 @@
-//Register the listener function with the ee event emitter in such a way that the listener function is only called a single time. If implemented correctly, the program should print out passed!:
+//Register the listener function with the ee event emitter in such a way that the listener function is only called a single time. 
+//If implemented correctly, the program should print out passed!:
 
 'use strict'
 const assert = require('assert')
