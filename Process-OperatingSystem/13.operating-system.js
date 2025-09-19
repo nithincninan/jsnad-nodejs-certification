@@ -17,7 +17,7 @@ console.log("Temp dir", os.tmpdir());
 console.log("--------------- System Stats -----------------");
 console.log("system uptime", os.uptime()); // IMP
 console.log("freemem", os.freemem());
-console.log("totalmem", os.totalmem());
+console.log("totalmem", os.totalmem()); //IMP
 
 //OUTPUT:
 //--------------------------------

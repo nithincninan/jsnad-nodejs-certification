@@ -26,6 +26,7 @@ setTimeout(() => {
 //--------------------------------
 
 //IMP:
+//process: process is an object that contains information about the current process.
 //process.cpuUsage(): The CPU usage of the current process. --> { user: 12345, system: 6789 }
 
 //process.cpuUsage().user: The user CPU usage of the current process. time spent in user code (microseconds).

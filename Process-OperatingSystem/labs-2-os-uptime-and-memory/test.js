@@ -1,16 +1,45 @@
-const { execSync } = require('child_process');
 
-try {
-  // Run index.js and capture output
-  const output = execSync('node index.js').toString().trim();
+//Follow the TODO comments for each of the console.log statements in index.js
 
-  if (output === '42') {
-    console.log("passed!");
-  } else {
-    console.error("failed! got:", output);
-    process.exit(1);
+//Run node test.js to verify whether the task was successfully completed, 
+//if it was node test.js will output passed!.
+
+'use strict'
+const assert = require('assert')
+const os = require('os')
+const { runInThisContext } = require('vm')
+const run = (s) => runInThisContext(Buffer.from(s, 'base64'))
+const { log } = console
+
+const queue = [
+  (line) => assert.strictEqual(
+    Math.floor(line),
+    1,
+    'first log line should be the uptime of the process'
+  ),
+  (line) => assert.strictEqual(
+    line,
+    run('KG9zKSA9PiBvcy51cHRpbWUoKQ==')(os),
+    'second log line should be the uptime of the OS'
+  ),
+  (line) => assert.strictEqual(
+    line,
+    run('KG9zKSA9PiBvcy50b3RhbG1lbSgp')(os),
+    'third line should be total system memory'
+  ),
+  (line) => assert.strictEqual(
+    line,
+    run('cHJvY2Vzcy5tZW1vcnlVc2FnZSgpLmhlYXBUb3RhbA=='),
+    'fourth line should be total process memory'
+  )
+]
+
+console.log = (line) => {
+  queue.shift()(line)
+  if (queue.length === 0) {
+    console.log = log
+    console.log('passed!')
   }
-} catch (err) {
-  console.error("failed with error:", err.message);
-  process.exit(1);
 }
+
+require('.')
