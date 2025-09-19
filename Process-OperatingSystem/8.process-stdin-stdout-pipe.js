@@ -2,8 +2,6 @@
 //Write a Node.js script that uses process.stdin and process.stdout to read from the standard input 
 //and write to the standard output.
 
-"use strict";
-
 'use strict'
 console.log('initialized')
 const { Transform } = require('stream')

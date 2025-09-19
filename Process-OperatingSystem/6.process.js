@@ -2,6 +2,7 @@
 //Write a Node.js script that uses process.env to print all environment variables and their values.
 
 "use strict";
+console.log("--------------- Process Info -----------------");
 console.log("Current Directory", process.cwd());
 console.log("Process Platform", process.platform);
 console.log("Process ID", process.pid);
