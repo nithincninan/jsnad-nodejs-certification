@@ -1,4 +1,4 @@
-//11. remove-all-listener
+//6. remove-all-listener
 
 //Write a Node.js script that uses an `EventEmitter` to emit a `my-event` event with two listeners,
 //one that logs "listener 1" and one that logs "listener 2", using `removeAllListeners` to remove all listeners.

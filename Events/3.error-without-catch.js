@@ -1,4 +1,4 @@
-//8. error-without-catch
+//3. error-without-catch
 
 //Write a Node.js script that uses an `EventEmitter` to emit an `error` event without a catch block, 
 //and logs the error message.

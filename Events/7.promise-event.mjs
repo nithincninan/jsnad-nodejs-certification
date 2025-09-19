@@ -1,4 +1,4 @@
-//12. promise-event
+//7. promise-event
 
 //Write a Node.js script that uses an `EventEmitter` to emit a `data` event with a promise.
 

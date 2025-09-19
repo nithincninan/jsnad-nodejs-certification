@@ -1,4 +1,4 @@
-//7. error-catch
+//2.error-catch
 
 //Write a Node.js script that uses an `EventEmitter` to emit an `error` event and a `data` event, 
 //and handles the `error` event to log the error message without crashing the process.

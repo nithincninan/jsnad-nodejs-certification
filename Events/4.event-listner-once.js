@@ -1,4 +1,4 @@
-//9. event-listner-once
+//4. event-listner-once
 
 //Write a Node.js script that uses an `EventEmitter` to emit a `my-event` event with a listener that logs "my-event fired" only once.
 

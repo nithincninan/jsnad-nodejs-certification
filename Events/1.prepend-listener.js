@@ -1,4 +1,4 @@
-//6. prepend-listener
+//1. prepend-listener
 
 //Write a Node.js script that uses an `EventEmitter` to emit a `my-event` event with two listeners,
 //one that logs "1st" and one that logs "2nd", using `prependListener` to add the first listener.

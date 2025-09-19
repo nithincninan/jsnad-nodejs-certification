@@ -1,4 +1,4 @@
-//12. promise-event-abort
+//8. promise-event-abort
 
 //Write a Node.js script that uses an `EventEmitter` to emit a `data` event with a promise,
 //and uses `AbortSignal` to abort the promise after a specified time.
