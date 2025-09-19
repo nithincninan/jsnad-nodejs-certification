@@ -1,4 +1,4 @@
-//11. CPU Usage
+//6. CPU Usage
 //Write a Node.js script that uses the process.cpuUsage() method to monitor CPU usage over time.
 
 "use strict";

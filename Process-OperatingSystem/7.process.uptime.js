@@ -1,4 +1,4 @@
-//9. Process Uptime
+//7. Process Uptime
 //Write a Node.js script that uses process.uptime() to print the uptime of the process.
 
 "use strict";

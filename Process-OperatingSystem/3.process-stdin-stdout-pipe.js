@@ -1,4 +1,4 @@
-//8. Process stdin and stdout
+//3. Process stdin and stdout
 //Write a Node.js script that uses process.stdin and process.stdout to read from the standard input 
 //and write to the standard output.
 
