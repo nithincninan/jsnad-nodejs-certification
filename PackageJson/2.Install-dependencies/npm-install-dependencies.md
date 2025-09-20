@@ -1,7 +1,10 @@
- - Once a folder has a package.json file, dependencies can be installed.
+Installing Dependencies (1)
 
-Install a logger: npm install pino
+- Once a folder has a package.json file, dependencies can be installed.
 
+Install a logger: 
+
+- npm install pino
   ```
   added 13 packages, and audited 14 packages in 2s
 
@@ -10,6 +13,16 @@ Install a logger: npm install pino
 
   found 0 vulnerabilities
   ```
+ 
+ Will add package.json
+  ```
+    {
+      "dependencies": {
+        "pino": "^9.10.0"
+      }
+    }
+  ```
+
 
 - ls -ltr
   ```
